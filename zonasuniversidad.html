@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zonas de la Universidad - UNAB Online</title>
+
+  <style>
+    :root {
+      --color-principal: #200f00;    
+      --color-secundario: #f5f7fa;   
+      --color-acento: #ffc107;       
+      --color-texto: #333333;        
+      --color-blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      display: grid;
+      grid-template-columns: 220px 1fr 250px;
+      grid-template-rows: 70px 1fr;
+      grid-template-areas:
+        "header header header"
+        "sidebar main rightbar";
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      grid-area: header;
+      background-color: var(--color-principal);
+      color: var(--color-blanco);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    nav {
+      grid-area: sidebar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--color-principal);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-principal);
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .tarjeta {
+      background: var(--color-blanco);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .tarjeta h2 {
+      margin-top: 0;
+      color: var(--color-principal);
+    }
+
+    .tarjeta ul {
+      padding-left: 20px;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      background-color: var(--color-acento);
+      color: var(--color-principal);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-volver:hover {
+      background-color: #e0ad06;
+    }
+
+    aside {
+      grid-area: rightbar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      border-left: 1px solid #ddd;
+      overflow-y: auto;
+    }
+
+    .profesor {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profesor img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--color-principal);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logounab.png" alt="Logo UNAB" />
+    <h1>UNIVERSIDAD AUTÓNOMA DE BUCARAMANGA</h1>
+  </header>
+
+  <nav>
+    <h2>Accesos rápidos</h2>
+    <ul>
+      <li><a href="espaciosdeportivos.html">Espacios Deportivos</a></li>
+      <li><a href="reservarobjetos.html">Reservar Objetos</a></li>
+      <li><a href="zonasuniversidad.html">Zonas de la Universidad</a></li>
+      <li><a href="eventosacademicos.html">Eventos Académicos</a></li>
+      <li><a href="cafeterias.html">Cafeterías y Comedores</a></li>
+      <li><a href="directorioestudiantil.html">Directorio Estudiantil</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="tarjeta">
+      <h2>Zonas Principales de la Universidad</h2>
+      <p>Explora y conoce los espacios más importantes del campus UNAB:</p>
+      <ul>
+        <li><strong>Biblioteca Central</strong> — Salas de estudio, cubículos, material académico.</li>
+        <li><strong>Plaza Fundadores</strong> — Punto de encuentro y actividades culturales.</li>
+        <li><strong>Bloque de Laboratorios</strong> — Tecnología e infraestructura para prácticas.</li>
+        <li><strong>Centro de Bienestar Universitario</strong> — Servicios médicos, psicología y acompañamiento estudiantil.</li>
+        <li><strong>Aulas Interactivas</strong> — Ambientes modernos para clases presenciales.</li>
+      </ul>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Zonas Administrativas</h2>
+      <ul>
+        <li>Registro Académico</li>
+        <li>Atención al Estudiante</li>
+        <li>Dirección de Carrera</li>
+        <li>Servicios Financieros</li>
+      </ul>
+    </div>
+
+    <div class="tarjeta">
+      <h2>Zonas de Bienestar</h2>
+      <ul>
+        <li>Gimnasio universitario</li>
+        <li>Cancha múltiple</li>
+        <li>Salas de música y arte</li>
+        <li>Salón múltiple cultural</li>
+      </ul>
+    </div>
+
+    <a class="btn-volver" href="base.html">⟵ Volver a Inicio</a>
+
+  </main>
+
+<aside>
+    <h2>Profesores</h2>
+    <input type="text" id="buscador" placeholder="Buscar profesor..." style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;">
+
+    <div class="profesor"><img src="usuario0.png" alt=""><span>Julián Santiago Santoyo Díaz</span></div>
+    <div class="profesor"><img src="usuario1.png" alt=""><span>Jose Fabian Diaz Silva</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Jorge Noriega Guarin</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Sandra Orostegui</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Christian Sarmiento</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Alexander Anchicoque Calderon</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>William Gonzales Calderan</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Raul Ortiz Rojas</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Luzdari Rangel Ruiz</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Leidy Johanna Gonzales</span></div>
+  </aside>
+
+  <script>
+    const buscador = document.getElementById("buscador");
+    const profesores = document.querySelectorAll(".profesor");
+
+    buscador.addEventListener("input", () => {
+      const texto = buscador.value.toLowerCase();
+      profesores.forEach(prof => {
+        const nombre = prof.textContent.toLowerCase();
+        prof.style.display = nombre.includes(texto) ? "flex" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

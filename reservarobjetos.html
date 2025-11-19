@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservar Objetos - UNAB Online</title>
+
+  <style>
+    :root {
+      --color-principal: #200f00;    
+      --color-secundario: #f5f7fa;   
+      --color-acento: #ffc107;       
+      --color-texto: #333333;        
+      --color-blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      display: grid;
+      grid-template-columns: 220px 1fr 250px;
+      grid-template-rows: 70px 1fr;
+      grid-template-areas:
+        "header header header"
+        "sidebar main rightbar";
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      grid-area: header;
+      background-color: var(--color-principal);
+      color: var(--color-blanco);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    nav {
+      grid-area: sidebar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--color-principal);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-principal);
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .tarjeta {
+      background: var(--color-blanco);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .tarjeta h2 {
+      margin-top: 0;
+      color: var(--color-principal);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--color-principal);
+    }
+
+    .btn-reservar {
+      background-color: var(--color-acento);
+      color: var(--color-principal);
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-reservar:hover {
+      background-color: #e0ad06;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      background-color: var(--color-acento);
+      color: var(--color-principal);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-volver:hover {
+      background-color: #e0ad06;
+    }
+
+    aside {
+      grid-area: rightbar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      border-left: 1px solid #ddd;
+      overflow-y: auto;
+    }
+
+    .profesor {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profesor img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--color-principal);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logounab.png" alt="Logo UNAB" />
+    <h1>UNIVERSIDAD AUTÓNOMA DE BUCARAMANGA</h1>
+  </header>
+
+  <nav>
+    <h2>Accesos rápidos</h2>
+    <ul>
+      <li><a href="espaciosdeportivos.html">Espacios Deportivos</a></li>
+      <li><a href="reservarobjetos.html">Reservar Objetos</a></li>
+      <li><a href="zonasuniversidad.html">Zonas de la Universidad</a></li>
+      <li><a href="eventosacademicos.html">Eventos Académicos</a></li>
+      <li><a href="cafeterias.html">Cafeterías y Comedores</a></li>
+      <li><a href="directorioestudiantil.html">Directorio Estudiantil</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="tarjeta">
+      <h2>Reservar Objetos o Espacios</h2>
+      <p>Completa la siguiente información para solicitar un objeto o reservar un espacio dentro de la universidad.</p>
+
+      <form>
+        <label>Nombre completo:</label>
+        <input type="text" placeholder="Tu nombre" required>
+
+        <label>Correo institucional:</label>
+        <input type="email" placeholder="tuemail@unab.edu.co" required>
+
+        <label>Objeto o espacio que deseas reservar:</label>
+        <select required>
+          <option value="">Seleccionar...</option>
+          <option>Balón de fútbol</option>
+          <option>Balón de baloncesto</option>
+          <option>Balón de Voleibol</option>
+          <option>Raquetas de Ping Pong</option>
+          <option>Raquetas de Tenis</option>
+          <option>Raquetas de Padel</option>
+          <option>Palos de Golf</option>
+          <option>Micrófono</option>
+          <option>Balón de Futbol Americano</option>
+        </main>
+        

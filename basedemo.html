@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universidad Autónoma de Bucaramanga</title>
+
+  <style>
+    /* ===============================
+       🎨 PALETA DE COLORES (CÁMBIALA AQUÍ)
+       =============================== */
+    :root {
+      --color-principal: #004080;    /* Azul institucional */
+      --color-secundario: #f5f7fa;   /* Fondo claro */
+      --color-acento: #ffc107;       /* Amarillo o color destacado */
+      --color-texto: #333333;        /* Texto general */
+      --color-blanco: #ffffff;
+    }
+
+    /* ===============================
+       🌐 ESTILOS GENERALES
+       =============================== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      display: grid;
+      grid-template-columns: 220px 1fr 250px;
+      grid-template-rows: 70px 1fr;
+      grid-template-areas:
+        "header header header"
+        "sidebar main rightbar";
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ===============================
+       🏫 ENCABEZADO SUPERIOR
+       =============================== */
+    header {
+      grid-area: header;
+      background-color: var(--color-principal);
+      color: var(--color-blanco);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    /* ===============================
+       📚 BARRA IZQUIERDA (ACCESOS)
+       =============================== */
+    nav {
+      grid-area: sidebar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--color-principal);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-principal);
+    }
+
+    /* ===============================
+       📰 SECCIÓN CENTRAL (NOTICIAS)
+       =============================== */
+    main {
+      grid-area: main;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .noticia {
+      background: var(--color-blanco);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .noticia img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .noticia h3 {
+      margin-top: 0;
+      color: var(--color-principal);
+    }
+
+    /* ===============================
+       👩‍🏫 BARRA DERECHA (PROFESORES)
+       =============================== */
+    aside {
+      grid-area: rightbar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      border-left: 1px solid #ddd;
+      overflow-y: auto;
+    }
+
+    .profesor {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profesor img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .profesor span {
+      font-weight: 500;
+    }
+
+    /* Scroll personalizado */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--color-principal);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔵 ENCABEZADO -->
+  <header>
+    <img src="logo-placeholder.png" alt="Logo Universidad" />
+    <h1>Universidad Autónoma de Bucaramanga</h1>
+  </header>
+
+  <!-- 🧭 BARRA IZQUIERDA -->
+  <nav>
+    <h2>Accesos rápidos</h2>
+    <ul>
+      <li><a href="#">Espacios Deportivos</a></li>
+      <li><a href="#">Reservar Objetos</a></li>
+      <li><a href="#">Zonas de la Universidad</a></li>
+      <li><a href="#">Eventos Académicos</a></li>
+      <li><a href="#">Cafeterías y Comedores</a></li>
+      <li><a href="#">Directorio Estudiantil</a></li>
+    </ul>
+  </nav>
+
+  <!-- 📰 SECCIÓN DE NOTICIAS -->
+  <main>
+    <div class="noticia">
+      <img src="https://via.placeholder.com/800x400" alt="Noticia 1">
+      <h3>Noticia</h3>
+      <p>Blablablalblbajshdlgkadjfhg.</p>
+    </div>
+
+    <div class="noticia">
+      <img src="https://via.placeholder.com/800x400" alt="Noticia 2">
+      <h3>Noticia 2</h3>
+      <p>Jlaksjdljfhlajhflkdaagdlfkjag.</p>
+    </div>
+
+    <div class="noticia">
+      <img src="https://via.placeholder.com/800x400" alt="Noticia 3">
+      <h3>Noticia 3</h3>
+      <p>KAJSHLIAYLGGatckydvaocw.</p>
+    </div>
+  </main>
+
+  <!-- 👩‍🏫 PERFIL DE PROFESORES -->
+  <aside>
+    <h2>Profesores</h2>
+    <div class="profesor">
+      <img src="https://via.placeholder.com/100" alt="Profesor 1">
+      <span>Julián Santoyo</span>
+    </div>
+    <div class="profesor">
+      <img src="https://via.placeholder.com/100" alt="Profesor 2">
+      <span>Profesor 2</span>
+    </div>
+    <div class="profesor">
+      <img src="https://via.placeholder.com/100" alt="Profesor 3">
+      <span>Profesor 3</span>
+    </div>
+  </aside>
+</body>
+</html>

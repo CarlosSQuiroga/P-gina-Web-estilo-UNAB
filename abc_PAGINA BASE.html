@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNAB Online</title>
+
+  <style>
+    :root {
+      --color-principal: #6562ef;    
+      --color-secundario: #f5f7fa;   
+      --color-acento: #ffc107;       
+      --color-texto: #333333;        
+      --color-blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      display: grid;
+      grid-template-columns: 220px 1fr 250px;
+      grid-template-rows: 70px 1fr;
+      grid-template-areas:
+        "header header header"
+        "sidebar main rightbar";
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      grid-area: header;
+      background-color: var(--color-principal);
+      color: var(--color-blanco);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .btn-login {
+      background-color: var(--color-acento);
+      color: var(--color-texto);
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-login:hover {
+      background-color: #e0a800;
+      transform: scale(1.05);
+    }
+
+    nav {
+      grid-area: sidebar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--color-principal);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-texto);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-principal);
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .noticia {
+      background: var(--color-blanco);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .noticia img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .noticia h3 {
+      margin-top: 0;
+      color: var(--color-principal);
+    }
+
+    aside {
+      grid-area: rightbar;
+      background-color: var(--color-blanco);
+      padding: 20px;
+      border-left: 1px solid #ddd;
+      overflow-y: auto;
+    }
+
+    .profesor {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profesor img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .profesor span {
+      font-weight: 500;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--color-principal);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <img src="logounab.png" alt="Logo Universidad" />
+      <h1>UNIVERSIDAD AUTÓNOMA DE BUCARAMANGA</h1>
+    </div>
+    <button class="btn-login" onclick="window.location.href='login.html'">Iniciar Sesión UNAB</button>
+  </header>
+
+  <nav>
+    <h2>Accesos rápidos</h2>
+    <ul>
+      <li><a href="espaciosdeportivos.html">Espacios Deportivos</a></li>
+      <li><a href="reservarobjetos.html">Reservar Objetos</a></li>
+      <li><a href="zonasuniversidad.html">Zonas de la Universidad</a></li>
+      <li><a href="eventosacademicos.html">Eventos Académicos</a></li>
+      <li><a href="cafeterias.html">Cafeterías y Comedores</a></li>
+      <li><a href="directorioestudiantil.html">Directorio Estudiantil</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="noticia">
+      <img src="noticia01.png" alt="Noticia 1">
+      <h3>Ganadores en deportes UNAB</h3>
+      <p>Distintos estudiantes nos estuvieron representando en distintas actividades deportivas, recibiendo premios por sus esfuerzos y tiempo dedicado, nos enorgullece tener a estas personas haciendo parte de actividades extrauniversitarias.</p>
+    </div>
+    <div class="noticia">
+      <img src="noticia02.png" alt="Noticia 2">
+      <h3>Siguientes eventos musicales</h3>
+      <p>Durante este mes de noviembre se estarán llevando a cabo distintos eventos musicales de los grados de estudiantes. Puedes averiguar los horarios y fechas en la secretaría del bloque N.</p>
+    </div>
+    <div class="noticia">
+      <img src="noticia03.png" alt="Noticia 3">
+      <h3>NSQK en la UNAB</h3>
+      <p>El reconocido rapero, compositor y cantautor NSQK se presentará en el auditorio mayor de la UNAB durante las fechas 18 y 19 de noviembre. Pregunta por tus boletas en Punto U.</p>
+    </div>
+    <div class="noticia">
+      <img src="noticia04.png" alt="Noticia 4">
+      <h3>Nuevos espacios deportivos</h3>
+      <p>UNAB Cultural y el colectivo de arte Tres Perros realizaron el pasado 18 de octubre “Ahora Más Que Nunca: Laboratorio Urbano” en las canchas del barrio El Jardín, justo debajo de la Biblioteca Luis Carlos Galán Sarmiento.</p>
+    </div>
+    <div class="noticia">
+      <img src="noticia05.png" alt="Noticia 5">
+      <h3>Concurso Nacional de Derecho</h3>
+      <p>Karime Ferez Domínguez y Andrés Felipe Parra Chaparro, estudiantes de décimo semestre del programa de Derecho, ganaron el segundo lugar en el 5.º Concurso de Conciliación en Derecho, Mediación y Negociación de la Cámara de Comercio de Bogotá.</p>
+    </div>
+    <div class="noticia">
+      <img src="noticia06.png" alt="Noticia 6">
+      <h3>Prácticas de Licenciatura Infantil</h3>
+      <p>Los días 28 y 29 de octubre, la sede El Jardín será el lugar en el que delegaciones de baile de diferentes universidades compitan en el Festival Nacional ASCUN Cultura 2025. ¡Conoce el cronograma y participa!</p>
+    </div>
+  </main>
+
+  <aside>
+    <h2>Profesores</h2>
+    <input type="text" id="buscador" placeholder="Buscar profesor..." style="width:100%; padding:8px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;">
+
+    <div class="profesor"><img src="usuario0.png" alt=""><span>Julián Santiago Santoyo Díaz</span></div>
+    <div class="profesor"><img src="usuario1.png" alt=""><span>Jose Fabian Diaz Silva</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Jorge Noriega Guarin</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Sandra Orostegui</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Christian Sarmiento</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Alexander Anchicoque Calderon</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>William Gonzales Calderan</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Raul Ortiz Rojas</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Luzdari Rangel Ruiz</span></div>
+    <div class="profesor"><img src="usuario.png" alt=""><span>Leidy Johanna Gonzales</span></div>
+  </aside>
+
+  <script>
+    const buscador = document.getElementById("buscador");
+    const profesores = document.querySelectorAll(".profesor");
+
+    buscador.addEventListener("input", () => {
+      const texto = buscador.value.toLowerCase();
+      profesores.forEach(prof => {
+        const nombre = prof.textContent.toLowerCase();
+        prof.style.display = nombre.includes(texto) ? "flex" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
